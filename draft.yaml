@@ -1,0 +1,243 @@
+# models:
+#   Admin\About:
+#     title_uz: string:400
+#     title_en: string:400
+#     title_ru: string:400
+#     sub_content_uz: text
+#     sub_content_en: text
+#     sub_content_ru: text
+#     content_uz: longtext
+#     content_en: longtext
+#     content_ru: longtext
+#     image_url: string
+#     video_url: string
+#     status: boolean
+#     timestamps
+# controllers:
+#   Admin\About:
+#     resource
+
+# models:
+#   Admin\News:
+#     title_uz: string:400
+#     title_en: string:400
+#     title_ru: string:400
+#     sub_content_uz: text
+#     sub_content_en: text
+#     sub_content_ru: text
+#     content_uz: longtext
+#     content_en: longtext
+#     content_ru: longtext
+#     date_mask: timestamp
+#     image_url: string
+#     status: boolean
+#     order: integer
+#     timestamps
+# controllers:
+#   Admin\News:
+#     resource
+
+# models:
+#   Admin\Leaders:
+#     image_url: string
+#     name_uz: string:400
+#     name_en: string:400
+#     name_ru: string:400
+#     position_uz: string:255
+#     position_en: string:255
+#     position_ru: string:255
+#     phone: string:255
+#     reception_days_uz: string:255
+#     reception_days_en: string:255
+#     reception_days_ru: string:255
+#     email: string:255
+#     content_uz: longtext
+#     content_en: longtext
+#     content_ru: longtext
+#     order: integer
+#     status: boolean
+#     timestamps
+# controllers:
+#   Admin\Leaders:
+#     resource
+
+# models:
+#   Admin\Gallery:
+#     title_uz: nullable string:400
+#     title_en: nullable string:400
+#     title_ru: nullable string:400
+#     image_url: nullable string:255
+#     status: nullable boolean
+#     order: nullable integer
+#     relationships:
+#       hasMany: Videos, Photos
+#     timestamps
+#   Admin\Videos:
+#     title_uz: nullable string:400
+#     title_en: nullable string:400
+#     title_ru: nullable string:400
+#     date_mask: nullable timestamp
+#     image_url: nullable string
+#     video_url: nullable string
+#     gallery_id: nullable id foreign:gallery
+#     status: nullable boolean
+#     order: nullable integer
+#     timestamps
+#   Admin\Photos:
+#     image_url: nullable string
+#     title_uz: nullable string:400
+#     title_en: nullable string:400
+#     title_ru: nullable string:400
+#     gallery_id: nullable id foreign:gallery
+#     status: nullable boolean
+#     order: nullable integer
+#     timestamps
+# controllers:
+#   Admin\Gallery:
+#     resource
+#   Admin\Videos:
+#     resource
+#   Admin\Photos:
+#     resource
+
+# models:
+#   Admin\Carousel:
+#     title_uz: nullable string:400
+#     title_en: nullable string:400
+#     title_ru: nullable string:400
+#     sub_content_uz: nullable text
+#     sub_content_en: nullable text
+#     sub_content_ru: nullable text
+#     image_url: nullable string
+#     url: nullable string
+#     status: nullable boolean
+#     order: nullable integer
+#     timestamps
+#   Admin\Exposition:
+#     title_uz: nullable string:400
+#     title_en: nullable string:400
+#     title_ru: nullable string:400
+#     sub_content_uz: nullable text
+#     sub_content_en: nullable text
+#     sub_content_ru: nullable text
+#     content_uz: nullable longtext
+#     content_en: nullable longtext
+#     content_ru: nullable longtext
+#     date_mask: nullable timestamp
+#     image_url: nullable string
+#     image_main_url: nullable string
+#     status: nullable boolean
+#     order: nullable integer
+#     timestamps
+#   Admin\ForChildren:
+#     title_uz: nullable string:400
+#     title_en: nullable string:400
+#     title_ru: nullable string:400
+#     sub_content_uz: nullable text
+#     sub_content_en: nullable text
+#     sub_content_ru: nullable text
+#     content_uz: nullable longtext
+#     content_en: nullable longtext
+#     content_ru: nullable longtext
+#     date_mask: nullable timestamp
+#     image_url: nullable string
+#     image_main_url: nullable string
+#     status: nullable boolean
+#     order: nullable integer
+#     timestamps
+#   Admin\MuseumCollection:
+#     title_uz: nullable string:400
+#     title_en: nullable string:400
+#     title_ru: nullable string:400
+#     sub_content_uz: nullable text
+#     sub_content_en: nullable text
+#     sub_content_ru: nullable text
+#     content_uz: nullable longtext
+#     content_en: nullable longtext
+#     content_ru: nullable longtext
+#     date_mask: nullable timestamp
+#     image_url: nullable string
+#     image_main_url: nullable string
+#     status: nullable boolean
+#     order: nullable integer
+#     timestamps
+#   Admin\UsefullLinks:
+#     title_uz: nullable string:400
+#     title_en: nullable string:400
+#     title_ru: nullable string:400
+#     image_url: nullable string
+#     redirect_url: nullable string
+#     status: nullable boolean
+#     order: nullable integer
+#     timestamps
+# controllers:
+#   Admin\Carousel:
+#     resource
+#   Admin\Exposition:
+#     resource
+#   Admin\ForChildren:
+#     resource
+#   Admin\MuseumCollection:
+#     resource
+#   Admin\UsefullLinks:
+#     resource
+
+# models:
+#   Admin\ForChildrenCategory:
+#     title_uz: nullable string:400
+#     title_en: nullable string:400
+#     title_ru: nullable string:400
+#     status: nullable boolean
+#     order: nullable integer
+#     timestamps
+#   Admin\ScientificResearchCategory:
+#     title_uz: nullable string:400
+#     title_en: nullable string:400
+#     title_ru: nullable string:400
+#     status: nullable boolean
+#     order: nullable integer
+#     timestamps
+#   Admin\ScientificResearch:
+#     title_uz: nullable string:400
+#     title_en: nullable string:400
+#     title_ru: nullable string:400
+#     sub_content_uz: nullable text
+#     sub_content_en: nullable text
+#     sub_content_ru: nullable text
+#     content_uz: nullable longtext
+#     content_en: nullable longtext
+#     content_ru: nullable longtext
+#     date_mask: nullable timestamp
+#     category_id: nullable id foreign:scientific_research_categories
+#     image_url: nullable string
+#     image_main_url: nullable string
+#     status: nullable boolean
+#     order: nullable integer
+#     timestamps
+
+# controllers:
+#   Admin\ForChildrenCategory:
+#     resource
+#   Admin\ScientificResearchCategory:
+#     resource
+#   Admin\ScientificResearch:
+#     resource
+
+
+models:
+  Admin\Event:
+    title_uz: nullable string:400
+    title_en: nullable string:400
+    title_ru: nullable string:400
+    content_uz: nullable longtext
+    content_en: nullable longtext
+    content_ru: nullable longtext
+    date_mask: nullable timestamp
+    image_url: nullable string
+    video_url: nullable string
+    status: nullable boolean
+    order: nullable integer
+    timestamps
+controllers:
+  Admin\Event:
+    resource

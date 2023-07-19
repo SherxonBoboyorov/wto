@@ -1,0 +1,110 @@
+{
+  "menu": [
+    {
+      "url": "admin/",
+      "name": "Home",
+      "icon": "home",
+      "slug": "admin.home"
+    },
+    {
+      "name": "About",
+      "icon": "users",
+      "slug": "admin.about.index",
+      "url":"/admin/about"
+    },
+    {
+      "name": "Carousel",
+      "icon": "image",
+      "slug": "admin.carousel.index",
+      "url":"/admin/carousel"
+    },
+    {
+      "name": "For children",
+      "icon": "smile",
+      "slug": "admin.for-children.index",
+      "url":"/admin/for-children"
+    },
+    {
+      "name": "Exposition Categories",
+      "icon": "grid",
+      "slug": "admin.exposition-category.index",
+      "url":"/admin/exposition-category"
+    },
+    {
+      "name": "Expositions",
+      "icon": "codesandbox",
+      "slug": "admin.exposition.index",
+      "url":"/admin/exposition"
+    },
+    {
+      "name": "Research Categories",
+      "icon": "grid",
+      "slug": "admin.scientific-research-category.index",
+      "url":"/admin/scientific-research-category"
+    },
+    {
+      "name": "Research",
+      "icon": "book-open",
+      "slug": "admin.scientific-research.index",
+      "url":"/admin/scientific-research"
+    },
+    {
+      "name": "Usefull links",
+      "icon": "link",
+      "slug": "admin.usefull-links.index",
+      "url":"/admin/usefull-links"
+    },
+    {
+      "name": "Museum collection",
+      "icon": "codesandbox",
+      "slug": "admin.museum-collection.index",
+      "url":"/admin/museum-collection"
+    },
+
+    {
+      "name": "Media",
+      "icon": "slack",
+      "slug": "",
+      "url":"",
+      "submenu":[
+        {
+          "name": "Gallery",
+          "icon": "feather",
+          "slug": "admin.gallery.index",
+          "url":"/admin/gallery"
+        },
+        {
+          "name": "Photos",
+          "icon": "image",
+          "slug": "admin.photos.index",
+          "url":"/admin/photos"
+        },
+        {
+          "name": "Videos",
+          "icon": "video",
+          "slug": "admin.videos.index",
+          "url":"/admin/videos"
+        }
+      ]
+
+    },
+    {
+      "name": "Leaders",
+      "icon": "user-plus",
+      "slug": "admin.leaders.index",
+      "url":"/admin/leaders"
+    },
+    {
+      "name": "News",
+      "icon": "file-text",
+      "slug": "admin.news.index",
+      "url":"/admin/news"
+    },
+    {
+      "name": "Event",
+      "icon": "file-text",
+      "slug": "admin.event.index",
+      "url":"/admin/event"
+    }
+  ]
+}

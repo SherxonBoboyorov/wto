@@ -1,0 +1,10 @@
+<script src="{{@asset('/front/js/jquery-3.6.1.min.js')}}"></script>
+<script src="{{@asset('/front/js/slick.min.js')}}"></script>
+<script src="{{@asset('/front/js/materialize.min.js')}}"></script>
+<script src="{{@asset('/front/js/fancyapps-ui.js')}}"></script>
+<script src="{{@asset('/front/js/owl.carousel.js')}}"></script>
+<script src="{{@asset('/front/js/slic.js')}}"></script>
+<script src="{{@asset('/front/js/visuallyImpaired.js')}}"></script>
+<script src="{{@asset('/front/js/fancybox_main.js')}}"></script>
+<script src="{{@asset('/front/js/mar_ru.js')}}"></script>
+<script src="{{@asset('/front/js/index.js')}}"></script>
