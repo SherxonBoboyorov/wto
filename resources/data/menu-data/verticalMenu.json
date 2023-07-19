@@ -105,6 +105,12 @@
       "icon": "file-text",
       "slug": "admin.event.index",
       "url":"/admin/event"
+    },
+    {
+      "name": "Activity Category",
+      "icon": "file-text",
+      "slug": "admin.activity-category.index",
+      "url":"/admin/activity-category"
     }
   ]
 }

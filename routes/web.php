@@ -92,7 +92,12 @@ config('jetstream.auth_session'),
 
     Route::resource('event', App\Http\Controllers\Admin\EventController::class);
 
+    Route::resource('activity-category', App\Http\Controllers\Admin\ActivityCategoryController::class);
+
+
 });
+
+
 
 
 

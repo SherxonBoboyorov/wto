@@ -1,15 +1,15 @@
 created:
-    - app/Http/Controllers/Admin/EventController.php
-    - database/factories/Admin/EventFactory.php
-    - database/migrations/2023_07_19_072441_create_events_table.php
-    - app/Models/Admin/Event.php
-    - tests/Feature/Http/Controllers/Admin/EventControllerTest.php
-    - app/Http/Requests/Admin/EventStoreRequest.php
-    - app/Http/Requests/Admin/EventUpdateRequest.php
-    - resources/views/event/index.blade.php
-    - resources/views/event/create.blade.php
-    - resources/views/event/show.blade.php
-    - resources/views/event/edit.blade.php
+    - app/Http/Controllers/Admin/ActivityCategoryController.php
+    - database/factories/Admin/ActivityCategoryFactory.php
+    - database/migrations/2023_07_19_124320_create_activity_categories_table.php
+    - app/Models/Admin/ActivityCategory.php
+    - tests/Feature/Http/Controllers/Admin/ActivityCategoryControllerTest.php
+    - app/Http/Requests/Admin/ActivityCategoryStoreRequest.php
+    - app/Http/Requests/Admin/ActivityCategoryUpdateRequest.php
+    - resources/views/activityCategory/index.blade.php
+    - resources/views/activityCategory/create.blade.php
+    - resources/views/activityCategory/show.blade.php
+    - resources/views/activityCategory/edit.blade.php
 updated:
     - routes/web.php
 models:
@@ -30,3 +30,4 @@ models:
     Admin\ScientificResearch: { title_uz: 'nullable string:400', title_en: 'nullable string:400', title_ru: 'nullable string:400', sub_content_uz: 'nullable text', sub_content_en: 'nullable text', sub_content_ru: 'nullable text', content_uz: 'nullable longtext', content_en: 'nullable longtext', content_ru: 'nullable longtext', date_mask: 'nullable timestamp', category_id: 'nullable id foreign:scientific_research_categories', image_url: 'nullable string', image_main_url: 'nullable string', status: 'nullable boolean', order: 'nullable integer', timestamps: timestamps }
     Admin\ForChildrenCategory: { title_uz: 'nullable string:400', title_en: 'nullable string:400', title_ru: 'nullable string:400', status: 'nullable boolean', order: 'nullable integer', timestamps: timestamps }
     Admin\Event: { title_uz: 'nullable string:400', title_en: 'nullable string:400', title_ru: 'nullable string:400', content_uz: 'nullable longtext', content_en: 'nullable longtext', content_ru: 'nullable longtext', date_mask: 'nullable timestamp', image_url: 'nullable string', video_url: 'nullable string', status: 'nullable boolean', order: 'nullable integer', timestamps: timestamps }
+    Admin\ActivityCategory: { title_uz: 'nullable string:400', title_en: 'nullable string:400', title_ru: 'nullable string:400', status: 'nullable boolean', order: 'nullable integer', timestamps: timestamps }
