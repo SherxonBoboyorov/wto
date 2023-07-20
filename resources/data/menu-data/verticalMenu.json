@@ -95,6 +95,12 @@
       "url":"/admin/leaders"
     },
     {
+      "name": "Team",
+      "icon": "file-text",
+      "slug": "admin.team.index",
+      "url":"/admin/team"
+    },
+    {
       "name": "News",
       "icon": "file-text",
       "slug": "admin.news.index",

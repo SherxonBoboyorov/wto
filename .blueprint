@@ -1,15 +1,15 @@
 created:
-    - app/Http/Controllers/Admin/ActivityController.php
-    - database/factories/Admin/ActivityFactory.php
-    - database/migrations/2023_07_20_051809_create_activities_table.php
-    - app/Models/Admin/Activity.php
-    - tests/Feature/Http/Controllers/Admin/ActivityControllerTest.php
-    - app/Http/Requests/Admin/ActivityStoreRequest.php
-    - app/Http/Requests/Admin/ActivityUpdateRequest.php
-    - resources/views/activity/index.blade.php
-    - resources/views/activity/create.blade.php
-    - resources/views/activity/show.blade.php
-    - resources/views/activity/edit.blade.php
+    - app/Http/Controllers/Admin/TeamController.php
+    - database/factories/Admin/TeamFactory.php
+    - database/migrations/2023_07_20_093627_create_teams_table.php
+    - app/Models/Admin/Team.php
+    - tests/Feature/Http/Controllers/Admin/TeamControllerTest.php
+    - app/Http/Requests/Admin/TeamStoreRequest.php
+    - app/Http/Requests/Admin/TeamUpdateRequest.php
+    - resources/views/team/index.blade.php
+    - resources/views/team/create.blade.php
+    - resources/views/team/show.blade.php
+    - resources/views/team/edit.blade.php
 updated:
     - routes/web.php
 models:
@@ -32,3 +32,4 @@ models:
     Admin\Event: { title_uz: 'nullable string:400', title_en: 'nullable string:400', title_ru: 'nullable string:400', content_uz: 'nullable longtext', content_en: 'nullable longtext', content_ru: 'nullable longtext', date_mask: 'nullable timestamp', image_url: 'nullable string', video_url: 'nullable string', status: 'nullable boolean', order: 'nullable integer', timestamps: timestamps }
     Admin\ActivityCategory: { title_uz: 'nullable string:400', title_en: 'nullable string:400', title_ru: 'nullable string:400', status: 'nullable boolean', order: 'nullable integer', timestamps: timestamps }
     Admin\Activity: { title_uz: 'nullable string:400', title_en: 'nullable string:400', title_ru: 'nullable string:400', content_uz: 'nullable longtext', content_en: 'nullable longtext', content_ru: 'nullable longtext', date_mask: 'nullable timestamp', category_id: 'nullable id foreign:activity_categories', image_url: 'nullable string', status: 'nullable boolean', order: 'nullable integer', timestamps: timestamps }
+    Admin\Team: { title_uz: 'nullable string:400', title_en: 'nullable string:400', title_ru: 'nullable string:400', content_uz: 'nullable longtext', content_en: 'nullable longtext', content_ru: 'nullable longtext', biography_uz: 'nullable longtext', biography_en: 'nullable longtext', biography_ru: 'nullable longtext', publication_uz: 'nullable longtext', publication_en: 'nullable longtext', publication_ru: 'nullable longtext', date_mask: 'nullable timestamp', image_url: 'nullable string', status: 'nullable boolean', order: 'nullable integer', timestamps: timestamps }
