@@ -56,23 +56,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-4 col-4">
-                                    {{-- <div class="d-flex mb-1 flex-column">
-                                        <label class="form-check-label mb-50" for="status">Delete image</label>
-                                        <div class="form-check form-check-danger form-switch">
-                                            <input type="checkbox" name="delete_image" value=""
-                                                class="form-check-input" id="status" />
-                                        </div>
-                                    </div> --}}
                                 </div>
-                                {{-- <div class="col-md-4 col-4">
-                                    <div class="d-flex mb-1 flex-column">
-                                        <label class="form-check-label mb-50" for="status">Delete main image</label>
-                                        <div class="form-check form-check-danger form-switch">
-                                            <input type="checkbox"  name="delete_main_image" value=""
-                                                class="form-check-input" id="status" />
-                                        </div>
-                                    </div>
-                                </div> --}}
                                 <div class="col-md-4 col-4">
                                     <div class="d-flex mb-1 flex-column">
                                         <label class="form-check-label mb-50" for="status">Youtube url</label>

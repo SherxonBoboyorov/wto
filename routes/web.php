@@ -77,7 +77,6 @@ config('jetstream.auth_session'),
     Route::resource('event', App\Http\Controllers\Admin\EventController::class);
     Route::resource('activity-category', App\Http\Controllers\Admin\ActivityCategoryController::class);
     Route::resource('activity', App\Http\Controllers\Admin\ActivityController::class);
-
     Route::resource('team', App\Http\Controllers\Admin\TeamController::class);
 
 });

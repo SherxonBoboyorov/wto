@@ -25,30 +25,6 @@
       "url":"/admin/for-children"
     },
     {
-      "name": "Exposition Categories",
-      "icon": "grid",
-      "slug": "admin.exposition-category.index",
-      "url":"/admin/exposition-category"
-    },
-    {
-      "name": "Expositions",
-      "icon": "codesandbox",
-      "slug": "admin.exposition.index",
-      "url":"/admin/exposition"
-    },
-    {
-      "name": "Research Categories",
-      "icon": "grid",
-      "slug": "admin.scientific-research-category.index",
-      "url":"/admin/scientific-research-category"
-    },
-    {
-      "name": "Research",
-      "icon": "book-open",
-      "slug": "admin.scientific-research.index",
-      "url":"/admin/scientific-research"
-    },
-    {
       "name": "Usefull links",
       "icon": "link",
       "slug": "admin.usefull-links.index",
