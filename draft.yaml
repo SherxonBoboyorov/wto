@@ -242,15 +242,33 @@
 #     resource
 
 
+# models:
+#   Admin\ActivityCategory:
+#     title_uz: nullable string:400
+#     title_en: nullable string:400
+#     title_ru: nullable string:400
+#     status: nullable boolean
+#     order: nullable integer
+#     timestamps
+# controllers:
+#   Admin\ActivityCategory:
+#     resource
+
+
 models:
-  Admin\ActivityCategory:
+  Admin\Activity:
     title_uz: nullable string:400
     title_en: nullable string:400
     title_ru: nullable string:400
+    content_uz: nullable longtext
+    content_en: nullable longtext
+    content_ru: nullable longtext
+    date_mask: nullable timestamp
+    category_id: nullable id foreign:activity_categories
+    image_url: nullable string
     status: nullable boolean
     order: nullable integer
     timestamps
 controllers:
-  Admin\ActivityCategory:
+  Admin\Activity:
     resource
-

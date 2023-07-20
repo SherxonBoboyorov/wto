@@ -6,7 +6,7 @@ use App\Models\BaseModel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ActivityCategory extends BaseModel
+class Activity extends BaseModel
 {
     use HasFactory;
 
@@ -19,6 +19,12 @@ class ActivityCategory extends BaseModel
         'title_uz',
         'title_en',
         'title_ru',
+        'content_uz',
+        'content_en',
+        'content_ru',
+        'date_mask',
+        'category_id',
+        'image_url',
         'status',
         'order',
     ];
@@ -30,13 +36,13 @@ class ActivityCategory extends BaseModel
      */
     protected $casts = [
         'id' => 'integer',
+        'date_mask' => 'timestamp',
+        'category_id' => 'integer',
         'status' => 'boolean',
     ];
 
-
-    public function activities()
+    public function category()
     {
-        return $this->hasMany(Activity::class);
+        return $this->belongsTo(ActivityCategory::class);
     }
-
 }

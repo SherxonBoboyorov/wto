@@ -111,6 +111,12 @@
       "icon": "file-text",
       "slug": "admin.activity-category.index",
       "url":"/admin/activity-category"
+    },
+    {
+      "name": "Activity",
+      "icon": "file-text",
+      "slug": "admin.activity.index",
+      "url":"/admin/activity"
     }
   ]
 }

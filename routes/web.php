@@ -60,49 +60,23 @@ config('jetstream.auth_session'),
 'verified'])->name('admin.')->group(function(){
     Route::get('/',[StaterkitController::class, 'home'])->name('home');
     Route::resource('about', App\Http\Controllers\Admin\AboutController::class)->only(['edit','update','index']);
-
     Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
-    
     Route::resource('leaders', App\Http\Controllers\Admin\LeadersController::class);
-    
     Route::resource('gallery', App\Http\Controllers\Admin\GalleryController::class);
-    
     Route::resource('videos', App\Http\Controllers\Admin\VideosController::class);
-    
     Route::resource('photos', App\Http\Controllers\Admin\PhotosController::class);
-    
     Route::resource('carousel', App\Http\Controllers\Admin\CarouselController::class);
-
     Route::resource('exposition', App\Http\Controllers\Admin\ExpositionController::class);
-
     Route::resource('for-children-category', App\Http\Controllers\Admin\ForChildrenCategoryController::class);
-
     Route::resource('for-children', App\Http\Controllers\Admin\ForChildrenController::class);
-
     Route::resource('museum-collection', App\Http\Controllers\Admin\MuseumCollectionController::class);
-
     Route::resource('usefull-links', App\Http\Controllers\Admin\UsefullLinksController::class);
-
-    
     Route::resource('exposition-category', App\Http\Controllers\Admin\ExpositionCategoryController::class);
-
     Route::resource('scientific-research-category', App\Http\Controllers\Admin\ScientificResearchCategoryController::class);
-
     Route::resource('scientific-research', App\Http\Controllers\Admin\ScientificResearchController::class);
-
     Route::resource('event', App\Http\Controllers\Admin\EventController::class);
-
     Route::resource('activity-category', App\Http\Controllers\Admin\ActivityCategoryController::class);
+    Route::resource('activity', App\Http\Controllers\Admin\ActivityController::class);
 
 
 });
-
-
-
-
-
-
-
-
-
-
