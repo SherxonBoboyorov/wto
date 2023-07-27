@@ -15,6 +15,9 @@ class Activity extends BaseModel
      *
      * @var array
      */
+
+    protected $table = 'activities';
+
     protected $fillable = [
         'title_uz',
         'title_en',
@@ -41,8 +44,8 @@ class Activity extends BaseModel
         'status' => 'boolean',
     ];
 
-    public function category()
+    public function activitycategory()
     {
-        return $this->belongsTo(ActivityCategory::class);
+        return $this->belongsTo(ActivityCategory::class,  'category_id', 'id');
     }
 }

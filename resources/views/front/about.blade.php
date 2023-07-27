@@ -1,40 +1,38 @@
-@extends('layouts.front.main')
+@extends('layouts.front')
 
-@section('title', __('front.about_museum'))
 @section('content')
-    <div class="about_content">
-        <section class="container">
-            <div class="about_content__cart">
 
-                <div class="about_content__text">
-                    <p>
-                       {{ $model->sub_content }}
-                    </p>
-                    <img src="{{ asset($model->image_url) }}" alt="perspiciatis">
-                    {!!$model->content!!}
-                </div>
+      <!-- Main Block start -->
 
-                <div class="about_content__cart__videos">
-                    <div class="about_content__videos">
-                        <a data-fancybox="video-gallery" href="{{ $model->video_url }}">
-                            <img src="/front/foto/video.png" alt="video" />
-                            <!-- play start -->
+      <!-- Background Image start -->
+      <div class="back-img">
+        <img src="{{ asset('front/images/./../images/back-img.jpg') }}" alt="" />
+        <div class="text-content">
+          <p class="title">About us</p>
+          {{-- <p class="text">Main - About us</p> --}}
+          <p class="text"><a href="{{ route('/') }}">Main</a> - About</p>
+        </div>
+      </div>
+      <!-- Background Image end -->
 
-                            <div class="button__min is-play" href="#">
-                                <div class="button-outer-circle has-scale-animation"></div>
-                                <div class="button-outer-circle has-scale-animation has-delay-short"></div>
-                                <div class="button-icon is-play">
-                                    <img class="about_contint_in__video__img__play" alt="All"
-                                        src="/front/foto/play.svg">
-                                </div>
-                            </div>
 
-                            <!-- play end -->
-                        </a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="what-we-do">
+          <div class="row">
+            @foreach($pages as $page)
+              
+            <div class="col col-1">
+              <p class="text" style="margin-top: 0px !important">
+                {!! $page->{'sub_content_' . app()->getLocale()} !!}
+              </p>
 
+              <p class="text">
+                {!! $page->{'content_' . app()->getLocale()} !!}
+              </p>
             </div>
-        </section>
-    </div>
-@endsection
+            @endforeach
+          </div>
+          </div>
+        </div>
+
+      @endsection

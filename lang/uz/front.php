@@ -34,7 +34,8 @@ return [
     'developed_by_sos'=>':link tomonidan yaratilgan',
     'photos'=>'Rasmlar',
     'videos'=>'Videolar',
-    'this_section_is_under_development' => 'Ushbu bo\'lim hozirda ishlab chiqish jarayonida'
+    'this_section_is_under_development' => 'Ushbu bo\'lim hozirda ishlab chiqish jarayonida',
+    'en' => 'UZ'
 ]
 
 

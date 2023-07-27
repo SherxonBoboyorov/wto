@@ -15,6 +15,9 @@ class ActivityCategory extends BaseModel
      *
      * @var array
      */
+
+    protected $table = 'activity_categories';
+    
     protected $fillable = [
         'title_uz',
         'title_en',

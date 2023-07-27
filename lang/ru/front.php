@@ -34,7 +34,8 @@ return [
      'developed_by_sos'=>'Разработано в :link',
      'photos'=>'Изображения',
      'videos'=>'Видео',
-     'this_section_is_under_development' => 'Данный раздел находится на стадии разработки'
+     'this_section_is_under_development' => 'Данный раздел находится на стадии разработки',
+     'en' => 'RU'
 ]
 
 

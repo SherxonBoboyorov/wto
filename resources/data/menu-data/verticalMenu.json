@@ -19,58 +19,6 @@
       "url":"/admin/carousel"
     },
     {
-      "name": "For children",
-      "icon": "smile",
-      "slug": "admin.for-children.index",
-      "url":"/admin/for-children"
-    },
-    {
-      "name": "Usefull links",
-      "icon": "link",
-      "slug": "admin.usefull-links.index",
-      "url":"/admin/usefull-links"
-    },
-    {
-      "name": "Museum collection",
-      "icon": "codesandbox",
-      "slug": "admin.museum-collection.index",
-      "url":"/admin/museum-collection"
-    },
-
-    {
-      "name": "Media",
-      "icon": "slack",
-      "slug": "",
-      "url":"",
-      "submenu":[
-        {
-          "name": "Gallery",
-          "icon": "feather",
-          "slug": "admin.gallery.index",
-          "url":"/admin/gallery"
-        },
-        {
-          "name": "Photos",
-          "icon": "image",
-          "slug": "admin.photos.index",
-          "url":"/admin/photos"
-        },
-        {
-          "name": "Videos",
-          "icon": "video",
-          "slug": "admin.videos.index",
-          "url":"/admin/videos"
-        }
-      ]
-
-    },
-    {
-      "name": "Leaders",
-      "icon": "user-plus",
-      "slug": "admin.leaders.index",
-      "url":"/admin/leaders"
-    },
-    {
       "name": "Team",
       "icon": "file-text",
       "slug": "admin.team.index",

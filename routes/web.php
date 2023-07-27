@@ -1,9 +1,21 @@
 <?php
 
+use App\Http\Controllers\Front\ActivitiesController;
+use App\Http\Controllers\Front\ActivityInController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaterkitController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\SiteController;
+
+
+
+use App\Http\Controllers\Front\IndexController;
+use App\Http\Controllers\Front\PageController;
+use App\Http\Controllers\Front\TeamController;
+use App\Http\Controllers\Front\ArticleController;
+use App\Http\Controllers\Front\ContactController;
+use App\Http\Controllers\Front\EventsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,17 +28,10 @@ use App\Http\Controllers\SiteController;
 */
 
 Route::get('/', [SiteController::class, 'index'])->name('main');
-// Route::get('home', [StaterkitController::class, 'home'])->name('home');
-// // Route Components
-// Route::get('layouts/collapsed-menu', [StaterkitController::class, 'collapsed_menu'])->name('collapsed-menu');
-// Route::get('layouts/full', [StaterkitController::class, 'layout_full'])->name('layout-full');
-// Route::get('layouts/without-menu', [StaterkitController::class, 'without_menu'])->name('without-menu');
-// Route::get('layouts/empty', [StaterkitController::class, 'layout_empty'])->name('layout-empty');
-// Route::get('layouts/blank', [StaterkitController::class, 'layout_blank'])->name('layout-blank');
 
 
 // locale Route
-Route::get('lang/{locale}', [LanguageController::class, 'swap']);
+// Route::get('lang/{locale}', [LanguageController::class, 'swap']);
 
 Route::middleware([
     'auth:sanctum',
@@ -37,23 +42,33 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-Route::prefix('site')->name('site.')->controller(App\Http\Controllers\SiteController::class)->group(function(){
-    Route::get('/about', 'about')->name('about');
-    Route::get('/leaders', 'leaders')->name('leaders');
-    Route::get("/exposition/{model}", 'exposition')->name('exposition');
-    Route::get("/expositions/{category?}", 'expositions')->name('expositions');
-    Route::get("/researches/{category?}", 'researches')->name('researches');
-    Route::get("/research/{model}", 'research')->name('research');
-    // Route::get("/museum-collection/{model}", 'museumCollection')->name('museum-collection');
-    Route::get('/news', 'news')->name('news');
-    Route::get('/for-children/{model}', 'forChildren')->name('for-children');
-    Route::get('/news/{news?}', 'newsIn')->name('newsIn');
-    Route::get('/museum-collection', 'museumCollection')->name('museum-collection');
 
-    Route::get('/gallery', 'gallery')->name('gallery');
-    Route::get('/gallery/photos/{slug?}', 'fotoIn')->name('photoIn');
-    Route::get('/gallery/videos/{slug?}', 'videoIn')->name('videoIn');
-});
+
+ Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ], function(){ 
+        Route::get('/', [IndexController::class, 'homepage'])->name('/');
+        Route::get('about', [PageController::class, 'about'])->name('about');
+        Route::get('our-teams', [TeamController::class, 'list'])->name('our-teams');
+        Route::get('our-teams/{id}', [TeamController::class, 'show'])->name('our-team');
+        Route::get('articles', [ArticleController::class, 'list'])->name('articles');
+        Route::get('articles/{id}', [ArticleController::class, 'show'])->name('article');
+        Route::get('events', [EventsController::class, 'list'])->name('events');
+        Route::get('events/{id}', [EventsController::class, 'show'])->name('event');
+        Route::get('activities/{id?}', [ActivitiesController::class, 'list'])->name('activities');
+        Route::get('activitiy/{id}', [ActivitiesController::class, 'show'])->name('activitiy');
+        Route::get('contact', [ContactController::class, 'contact'])->name('contact');
+        Route::post('save_callback', [ContactController::class, 'saveCallback'])->name('saveCallback');
+
+    });
+
+
+
+
+
+ 
 
 Route::prefix('admin')->middleware(['auth:sanctum',
 config('jetstream.auth_session'),
@@ -77,6 +92,7 @@ config('jetstream.auth_session'),
     Route::resource('event', App\Http\Controllers\Admin\EventController::class);
     Route::resource('activity-category', App\Http\Controllers\Admin\ActivityCategoryController::class);
     Route::resource('activity', App\Http\Controllers\Admin\ActivityController::class);
+
     Route::resource('team', App\Http\Controllers\Admin\TeamController::class);
 
 });

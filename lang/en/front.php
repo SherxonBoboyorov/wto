@@ -34,7 +34,9 @@ return [
      'developed_by_sos'=>'Web developed by :link',
      'photos'=>'Photos',
      'videos'=>'Videos',
-     'this_section_is_under_development' => 'This section is under development'
+     'this_section_is_under_development' => 'This section is under development',
+     'en' => 'EN'
+
 ]
 
 
