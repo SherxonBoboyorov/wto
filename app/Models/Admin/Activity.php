@@ -39,7 +39,7 @@ class Activity extends BaseModel
      */
     protected $casts = [
         'id' => 'integer',
-        'date_mask' => 'timestamp',
+        'date_mask' => 'date:F d,Y',
         'category_id' => 'integer',
         'status' => 'boolean',
     ];

@@ -18,7 +18,7 @@
             
           <div class="head-section">
             <div class="text-content">
-              {{ $activitiy->activitycategory->{'title_' . app()->getLocale()} }} <span>{{ date('Y-m-d',strtotime($activitiy->date_mask)) }}</span>
+              {{ $activitiy->activitycategory->{'title_' . app()->getLocale()} }} <span>{{ $activitiy->date_mask->format('F d,Y') }}</span>
             </div>
             <div class="link-logos">
               <div class="share">@lang('front.share')</div>
@@ -42,10 +42,7 @@
             </p>
             {{-- <div class="img-content">
               <div class="col col-1">
-                <img src="./../images/activities-1.jpg" alt="" />
-              </div>
-              <div class="col col-2">
-                <img src="./../images/activities-1.jpg" alt="" />
+                <img src="{{ asset($activitiy->image_url) }}" alt="" />
               </div>
             </div> --}}
 

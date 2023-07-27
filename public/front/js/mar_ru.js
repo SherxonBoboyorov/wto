@@ -1,6 +1,6 @@
-let listVideo = document.querySelectorAll(".header__ru_none .header__ru_list");
+let listVideo = document.querySelectorAll(".languages-dropdown__ru_none .languages-dropdown__ru_list");
 let mainVideo = document.querySelector(".header__ru_cart a");
-let header__en__link = document.querySelector(".header__ru_cart .header__en__link");
+let header__en__link = document.querySelector(".languages-dropdown__ru_cart .languages-dropdown__en__link");
 
 listVideo.forEach(a => {
     a.onclick = () => {

@@ -52,7 +52,7 @@
               cursor: pointer;
 
               i {
-                font-size: 20px !important;
+                font-size: 17px !important;
                 color: white;
               }
 
@@ -74,10 +74,10 @@
           p {
             &.think a {
               font-weight: 400 !important;
-              font-size: 12px;
+              font-size: 10px;
 
               span {
-                font-size: 14px;
+                font-size: 12px;
                 margin: 0 5px !important;
               }
             }
@@ -85,7 +85,7 @@
             a {
               color: #98b8d3;
               font-family: "Gotham Pro";
-              font-size: 14px;
+              font-size: 12px;
               font-weight: 500;
               line-height: 38px;
               transition: all 0.2s linear;
@@ -101,16 +101,6 @@
           }
         }
       }
-    }
-  }
-}
-
-@media (max-width: 950px) {
-  .footer .row .col div p a {
-    font-size: 12px !important;
-
-    span {
-      font-size: 11px !important;
     }
   }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\OptionsController;
 use App\Http\Controllers\Front\ActivitiesController;
 use App\Http\Controllers\Front\ActivityInController;
 use Illuminate\Support\Facades\Route;
@@ -94,6 +95,7 @@ config('jetstream.auth_session'),
     Route::resource('activity', App\Http\Controllers\Admin\ActivityController::class);
 
     Route::resource('team', App\Http\Controllers\Admin\TeamController::class);
+    Route::resource('options', OptionsController::class);
 
 });
 

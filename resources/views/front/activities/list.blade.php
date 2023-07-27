@@ -9,7 +9,7 @@
         <img src="{{ asset('front/images/./../images/back-img.jpg') }}" alt="" />
         <div class="text-content">
           <p class="title">@lang('front.activities')</p>
-          <p class="text"><a href="{{ route('/') }}">@lang('front.home')</a> - @lang('front.activities')</p>
+          <p class="text"><a href="{{ route('/') }}">@lang('front.main')</a> - @lang('front.activities')</p>
         </div>
       </div>
       <!-- Background Image end -->
@@ -32,7 +32,7 @@
             <div class="text-content">
               <div class="date-content">
                 <div class="type">{{ $activity->activitycategory->{'title_' . app()->getLocale()} }}</div>
-                <div class="date">{{ date('Y-m-d',strtotime($activity->date_mask)) }}</div>
+                <div class="date">{{ $activity->date_mask->format('F d,Y') }}</div>
               </div>
               <p class="title">{{ $activity->{'title_' . app()->getLocale()} }}</p>
               <h6 class="description">

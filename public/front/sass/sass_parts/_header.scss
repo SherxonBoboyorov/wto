@@ -49,6 +49,7 @@
             position: relative;
             color: $colorBlue;
             font-weight: 400;
+            font-size: 14px !important;
 
             &:hover::after {
               width: 100%;
@@ -92,97 +93,16 @@
         color: $colorBlue;
       }
     }
-
-    .container-dropdown {
-      .wrapper-dropdown {
-        cursor: pointer;
-        position: relative;
-        display: inline-block;
-        padding: 5px 3px 1px 3px !important;
-        background: #ffffff;
-
-        .selected-display {
-          color: $colorBlue !important;
-
-          a {
-            color: inherit;
-            &:active {
-              color: inherit;
-            }
-          }
-
-          &:active {
-            color: $colorBlue !important;
-          }
-        }
-
-        .dropdown {
-          border-radius: 5px;
-          transition: 0.1s;
-          position: absolute;
-          top: 100%;
-          right: 0;
-          left: 0;
-          z-index: 99;
-          background: inherit;
-          visibility: hidden;
-          box-shadow: 0px 0px 9px -1px rgba(34, 60, 80, 0.4);
-          color: $colorBlue;
-          li {
-            padding-left: 5px !important;
-            overflow: hidden;
-            margin-bottom: 5px !important;
-
-            a {
-              color: $colorBlue !important;
-              display: block;
-
-              &:active {
-                color: $colorBlue !important;
-              }
-            }
-          }
-        }
-
-        svg {
-          margin-top: -2px !important;
-          transition: all 0.3s;
-          float: right;
-          rotate: 180deg;
-          color: $colorBlue;
-          &.rotated {
-            transform: rotate(-180deg);
-          }
-        }
-
-        &.active .dropdown {
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-
-      &.lang-1 {
-        display: none !important;
-      }
-    }
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .header {
-    .link-content ul li a {
-      font-size: 14px !important;
-    }
+    position: relative;
 
     .logo {
       max-width: 300px !important;
     }
-  }
-}
-
-@media (max-width: 850px) {
-  .header {
-    position: relative;
 
     .header-content {
       padding: 0 20px !important;
@@ -225,17 +145,6 @@
 
         i {
           font-size: 16px;
-        }
-      }
-
-      .container-dropdown {
-        &.lang-1 {
-          display: inline-block !important;
-          margin: 0 10px !important;
-        }
-
-        &.lang-2 {
-          display: none !important;
         }
       }
     }

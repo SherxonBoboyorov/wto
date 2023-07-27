@@ -109,7 +109,7 @@
                 <div class="text-content">
                   <div class="date-content">
                     <div class="type">{{ $activity->activitycategory->{'title_' . app()->getLocale()} }}</div>
-                    <div class="date">{{ date('Y-m-d',strtotime($activity->date_mask)) }}</div>
+                    <div class="date">{{ $activity->date_mask->format('F d,Y') }}</div>
                   </div>
                   <p class="title">{{ $activity->{'title_' . app()->getLocale()} }}</p>
                   <h6 class="description">
@@ -171,7 +171,7 @@
               <a href="{{ route('event', $event->id) }}">
                 <div class="text-content">
                   <div class="date-content">
-                    <div class="date">{{ date('F d,Y',strtotime($event->date_mask)) }}</div>
+                    <div class="date">{{ $event->date_mask->format('F d,Y') }}</div>
                   </div>
                   <p class="title">{{ $event->{'title_' . app()->getLocale()} }}</p>
                   <h6 class="description">

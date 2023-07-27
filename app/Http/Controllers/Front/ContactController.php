@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Callback;
+use App\Models\Options;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -12,7 +13,9 @@ class ContactController extends Controller
 {
     public function contact()
     {
-        return view('front.contact');
+
+        $options = Options::orderBy('created_at', 'DESC')->get();
+        return view('front.contact', compact('options'));
     }
 
 

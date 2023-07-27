@@ -29,7 +29,7 @@
           </div>
 
           <div class="head-section">
-            <div class="text-content">{{ date('Y-m-d',strtotime($event->date_mask)) }}</div>
+            <div class="text-content">{{ $event->date_mask->format('F d,Y') }}</div>
             <div class="link-logos">
               <div class="share">@lang('front.share')</div>
                 <a href="https://www.instagram.com/sharer/sharer.php?u={!! request()->url() !!}" class="sm-logos">

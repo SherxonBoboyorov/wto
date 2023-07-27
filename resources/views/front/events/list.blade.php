@@ -21,7 +21,7 @@
               <a href="{{ route('event', $event->id) }}">
                 <div class="text-content">
                   <div class="date-content">
-                    <div class="date">{{ date('Y-m-d',strtotime($event->date_mask)) }}</div>
+                    <div class="date">{{ $event->date_mask->format('F d,Y') }}</div>
                   </div>
                   <p class="title">{{ $event->{'title_' . app()->getLocale()} }}</p>
                   <h6 class="description">

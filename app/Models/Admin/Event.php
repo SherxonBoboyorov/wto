@@ -36,7 +36,7 @@ class Event extends BaseModel
      */
     protected $casts = [
         'id' => 'integer',
-        'date_mask' => 'timestamp',
+        'date_mask' => 'date:F d,Y',
         'status' => 'boolean',
     ];
 }

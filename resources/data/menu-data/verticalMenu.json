@@ -16,37 +16,43 @@
       "name": "Carousel",
       "icon": "image",
       "slug": "admin.carousel.index",
-      "url":"/admin/carousel"
+      "url": "/admin/carousel"
     },
     {
       "name": "Team",
-      "icon": "file-text",
+      "icon": "user-plus",
       "slug": "admin.team.index",
-      "url":"/admin/team"
+      "url": "/admin/team"
     },
     {
       "name": "News",
       "icon": "file-text",
       "slug": "admin.news.index",
-      "url":"/admin/news"
+      "url": "/admin/news"
     },
     {
       "name": "Event",
       "icon": "file-text",
       "slug": "admin.event.index",
-      "url":"/admin/event"
+      "url": "/admin/event"
     },
     {
       "name": "Activity Category",
-      "icon": "file-text",
+      "icon": "grid",
       "slug": "admin.activity-category.index",
-      "url":"/admin/activity-category"
+      "url": "/admin/activity-category"
     },
     {
       "name": "Activity",
-      "icon": "file-text",
+      "icon": "codesandbox",
       "slug": "admin.activity.index",
-      "url":"/admin/activity"
+      "url": "/admin/activity"
+    },
+    {
+      "name": "Options",
+      "icon": "smile",
+      "slug": "admin.options.index",
+      "url": "/admin/options"
     }
   ]
 }

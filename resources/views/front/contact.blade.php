@@ -23,27 +23,24 @@
           <div class="row">
             <div class="col col-1">
               <p>
-                <a href="./../about"
-                  ><span>@lang('front.phone_number'):</span> (+99871) 269-40-50
+                <a href="tel:{{ $options->where('key', 'phone')->first()->value }}"
+                  ><span>@lang('front.phone_number'):</span> {{ $options->where('key', 'phone')->first()->value }}
                 </a>
               </p>
               <p>
-                <a href="./../about"><span>@lang('front.fax'):</span> (+99871) 269-10-00 </a>
+                <a href="tel:{{ $options->where('key', 'fax')->first()->value }}"><span>@lang('front.fax'):</span> {{ $options->where('key', 'fax')->first()->value }} </a>
               </p>
               <p>
-                <a href="./../about"><span>@lang('front.email'):</span> info@wto.uz </a>
+                <a href="mailto:{{ $options->where('key', 'email')->first()->value }}"><span>@lang('front.email'):</span>{{ $options->where('key', 'email')->first()->value }}</a>
               </p>
             </div>
             <div class="col col-2">
               <p>
-                <a href="./../about"><span>@lang('front.address'): </span>68 Sadik Azimov St., Tashkent city,
-                  Uzbekistan
+                <a><span>@lang('front.address'): </span>{{ $options->where('key', 'address_' . app()->getLocale())->first()->value }}
                 </a>
               </p>
               <p>
-                <a href="./../about"
-                  ><span>@lang('front.landmarks'): </span>School #145, Dark Hall cafe,
-                  Govermental Polyclinic
+                <a><span>@lang('front.landmarks'): </span>{{ $options->where('key', 'lanrdmarks_' . app()->getLocale())->first()->value }}
                 </a>
               </p>
             </div>
@@ -82,7 +79,7 @@
       </div>
 
       <div class="map">
-         <iframe src="https://yandex.uz/map-widget/v1/?azimuth=0.49958372318048605&ll=73.302678%2C49.852729&z=10.41" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position: relative"></iframe>
+        {!! $options->where('key', 'map')->first()->value !!}
       </div>
 
       <!-- Contacts end -->

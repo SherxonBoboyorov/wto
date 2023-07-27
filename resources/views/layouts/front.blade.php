@@ -20,25 +20,7 @@
 
           <div class="collapse navbar-collapse link-content" id="navbarNavAltMarkup">
 
-            <div class="container-dropdown lang-1">
-              <div class="wrapper-dropdown" id="dropdown">
-                <span class="selected-display" id="destination">{{ strtoupper(app()->getLocale()) }}</span>
-                <svg class="" id="drp-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow transition-all ml-auto rotate-180" >
-                  <path d="M7 14.5l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-                <ul class="dropdown">
-                  @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                  @if($localeCode != app()->getLocale())
-                  <li class="item" @if($localeCode == app()->getLocale()) active @endif>
-                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                      {{ strtoupper($localeCode) }}
-                   </a>
-                  </li>
-                   @endif 
-                  @endforeach
-                </ul>
-              </div>
-            </div>
+           
 
             <div class="navbar-content">
               <div class="navbar-nav">
@@ -60,31 +42,38 @@
                 <div class="nav">
                   <a class="nav-link" href="{{ route('contact') }}">@lang('front.contacts')</a>
                 </div>
-
-                <div class="container-dropdown lang-2">
-                  <div class="wrapper-dropdown" id="dropdown">
-                    <span class="selected-display" id="destination">{{ strtoupper(app()->getLocale()) }}</span>
-                    <svg class="" id="drp-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow transition-all ml-auto rotate-180">
-                      <path d="M7 14.5l5-5 5 5" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-
-                    <ul class="dropdown">
-                      @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                      @if($localeCode != app()->getLocale())
-                      <li class="item" @if($localeCode == app()->getLocale()) active @endif>
-                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                          {{ strtoupper($localeCode) }}
-                       </a>
-                      </li>
-                       @endif 
-                      @endforeach
-                    </ul>
-                  </div>
-                </div>
-                
               </div>
             </div>
           </div>
+
+
+          <section class="languages-dropdown__ru__list">
+            <!-- language start -->
+
+            <div class="languages-dropdown__ru">
+
+                <div class="languages-dropdown__ru_cart dropdown-trigger"data-target='dropdown1'>
+                    <a data-target='dropdown1' class="languages-dropdown__en__link">{{ strtoupper(app()->getLocale()) }}</a>
+                    <span><i class="fas fa-angle-down"></i></span>
+                </div>
+
+                <div class="languages-dropdown__ru_none dropdown-content" id='dropdown1'>
+                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                        @if($localeCode != app()->getLocale())
+                        <div class="languages-dropdown__ru_list @if($localeCode == app()->getLocale()) active @endif">
+                            <a rel="alternate" class="languages-dropdown__en__link" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                {{ strtoupper($localeCode) }}
+                            </a>
+                        </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+
+            <!-- language start -->
+            <button class="languages-dropdown__burger__none sidenav-trigger" data-target="slide-out"><i class="fas fa-bars"></i></button>
+        </section>
+
           <button class="navbar-toggler" type="button">
             <i class="fa-solid fa-bars"></i>
           </button>
@@ -127,19 +116,19 @@
               </div>
               <div>
                 <p class="think">
-                  <a href="tel:+99 893 505 45 05">
-                    @lang('front.phone_number') <span>+99 893 505 45 05</span>
+                  <a href="tel:{{ $options->where('key', 'phone')->first()->value }}">
+                    @lang('front.phone_number') <span>{{ $options->where('key', 'phone')->first()->value }}</span>
                   </a>
                 </p>
                 <p class="think">
-                  <a href="#!">
+                  <a>
                     @lang('front.address')
-                    <span>68 Sadik Azimov St., Tashkent city, Uzbekistan</span>
+                    <span>{{ $options->where('key', 'address_' . app()->getLocale())->first()->value }}</span>
                   </a>
                 </p>
                 <p class="think">
-                  <a href="mailto:info@sos.uz">
-                    @lang('front.email') <span>info@sos.uz</span>
+                  <a href="mailto:{{ $options->where('key', 'email')->first()->value }}">
+                    @lang('front.email') <span>{{ $options->where('key', 'email')->first()->value }}</span>
                   </a>
                 </p>
               </div>
@@ -148,13 +137,13 @@
               <div>
                 <div class="link-logos">
                   <div class="sm-logo">
-                    <a href="#!"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="{{ $options->where('key', 'instagram')->first()->value }}"><i class="fa-brands fa-instagram"></i></a>
                   </div>
                   <div class="sm-logo">
-                    <a href="#!"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="{{ $options->where('key', 'facebook')->first()->value }}"><i class="fa-brands fa-facebook-f"></i></a>
                   </div>
                   <div class="sm-logo">
-                    <a href="#!"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="{{ $options->where('key', 'youtube')->first()->value }}"><i class="fa-brands fa-youtube"></i></a>
                   </div>
                 </div>
                 <p>
@@ -176,6 +165,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="{{ asset('front/js/swiper.js') }}"></script>
     <script src="{{ asset('front/js/app.js') }}"></script>
+    <script src="{{ asset('front/js/jquery-3.6.3.min.js') }}"></script>
+    <script src="{{ asset('front/js/materialize.min.js') }}"></script>
+    <script src="{{ asset('front/js/mar_ru.js') }}"></script>
+
   </body>
 </html>
     
