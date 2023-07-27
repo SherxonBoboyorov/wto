@@ -1,6 +1,4 @@
-
-
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,16 +19,23 @@
           </a> 
 
           <div class="collapse navbar-collapse link-content" id="navbarNavAltMarkup">
+
             <div class="container-dropdown lang-1">
               <div class="wrapper-dropdown" id="dropdown">
-                <span class="selected-display" id="destination">Uz</span>
+                <span class="selected-display" id="destination">{{ strtoupper(app()->getLocale()) }}</span>
                 <svg class="" id="drp-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow transition-all ml-auto rotate-180" >
                   <path d="M7 14.5l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
                 <ul class="dropdown">
-                  <li class="item"><a href="#">Uz</a></li>
-                  <li class="item"><a href="#">En</a></li>
-                  <li class="item"><a href="#">Ru</a></li>
+                  @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                  @if($localeCode != app()->getLocale())
+                  <li class="item" @if($localeCode == app()->getLocale()) active @endif>
+                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                      {{ strtoupper($localeCode) }}
+                   </a>
+                  </li>
+                   @endif 
+                  @endforeach
                 </ul>
               </div>
             </div>
@@ -38,22 +43,22 @@
             <div class="navbar-content">
               <div class="navbar-nav">
                 <div class="nav">
-                  <a class="nav-link" href="{{ route('about') }}">About</a>
+                  <a class="nav-link" href="{{ route('about') }}">@lang('front.about')</a>
                 </div>
                 <div class="nav">
-                  <a class="nav-link" href="{{ route('our-teams') }}">Our Team</a>
+                  <a class="nav-link" href="{{ route('our-teams') }}">@lang('front.our_team')</a>
                 </div>
                 <div class="nav">
-                  <a class="nav-link" href="{{ route('activities', ['id' => 1]) }}">Activities</a>
+                  <a class="nav-link" href="{{ route('activities', ['id' => 1]) }}">@lang('front.activities')</a>
                 </div>
                 <div class="nav">
-                  <a class="nav-link" href="{{ route('articles') }}">News</a>
+                  <a class="nav-link" href="{{ route('articles') }}">@lang('front.news')</a>
                 </div>
                 <div class="nav">
-                  <a class="nav-link" href="{{ route('events') }}">Events</a>
+                  <a class="nav-link" href="{{ route('events') }}">@lang('front.events')</a>
                 </div>
                 <div class="nav">
-                  <a class="nav-link" href="{{ route('contact') }}">Contacts</a>
+                  <a class="nav-link" href="{{ route('contact') }}">@lang('front.contacts')</a>
                 </div>
 
                 <div class="container-dropdown lang-2">
@@ -76,37 +81,7 @@
                     </ul>
                   </div>
                 </div>
-
-
-                {{-- <section class="header__ru__list">
-                  <!-- language start -->
-
-                  <div class="header__ru">
-
-                      <div class="header__ru_cart dropdown-trigger"data-target='dropdown1'>
-                          <a data-target='dropdown1' class="header__en__link">{{ strtoupper(app()->getLocale()) }}</a>
-                          <span><i class="fas fa-angle-down"></i></span>
-                      </div>
-
-                      <div class="header__ru_none dropdown-content" id='dropdown1'>
-                          @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                              @if($localeCode != app()->getLocale())
-                              <div class="header__ru_list @if($localeCode == app()->getLocale()) active @endif">
-                                  <a rel="alternate" class="header__en__link" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                      {{ strtoupper($localeCode) }}
-                                  </a>
-                              </div>
-                              @endif
-                          @endforeach
-                      </div>
-                  </div>
-
-                  <!-- language start -->
-                  <button class="header__burger__none sidenav-trigger" data-target="slide-out"><i class="fas fa-bars"></i></button>
-              </section> --}}
                 
-
-
               </div>
             </div>
           </div>
@@ -130,43 +105,41 @@
             <div class="col col-1">
               <div>
                 <p>
-                  <a href="{{ route('about') }}"> About </a>
+                  <a href="{{ route('about') }}">@lang('front.about')</a>
                 </p>
                 <p>
-                  <a href="{{ route('our-teams') }}"> Our Team </a>
+                  <a href="{{ route('our-teams') }}">@lang('front.our_team')</a>
                 </p>
                 <p>
-                  <a href="{{ route('activities', ['id' => 1]) }}"> Activities </a>
+                  <a href="{{ route('activities', ['id' => 1]) }}">@lang('front.activities')</a>
                 </p>
               </div>
               <div>
                 <p>
-                  <a href="{{ route('articles') }}"> News </a>
+                  <a href="{{ route('articles') }}">@lang('front.news')</a>
                 </p>
                 <p>
-                  <a href="{{ route('events') }}"> Events </a>
+                  <a href="{{ route('events') }}">@lang('front.events')</a>
                 </p>
                 <p>
-                  <a href="{{ route('contact') }}"> Contacts </a>
+                  <a href="{{ route('contact') }}">@lang('front.contacts')</a>
                 </p>
               </div>
               <div>
                 <p class="think">
                   <a href="tel:+99 893 505 45 05">
-                    PHONE NUMBER <span>+99 893 505 45 05</span>
+                    @lang('front.phone_number') <span>+99 893 505 45 05</span>
                   </a>
                 </p>
                 <p class="think">
-                  <a
-                    href="https://www.google.com/maps/place/68+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A1%D0%B0%D0%B4%D1%8B%D0%BA%D0%B0+%D0%90%D0%B7%D0%B8%D0%BC%D0%BE%D0%B2%D0%B0,+%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82,+%D0%A3%D0%B7%D0%B1%D0%B5%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD/@41.3038379,69.286333,17z/data=!3m1!4b1!4m6!3m5!1s0x38aef52ca707eaa9:0x14c8b822bd473a84!8m2!3d41.3038379!4d69.2889133!16s%2Fg%2F11h1htvj25?authuser=0&entry=ttu"
-                  >
-                    ADDRESS
+                  <a href="#!">
+                    @lang('front.address')
                     <span>68 Sadik Azimov St., Tashkent city, Uzbekistan</span>
                   </a>
                 </p>
                 <p class="think">
                   <a href="mailto:info@sos.uz">
-                    EMAIL <span>info@sos.uz</span>
+                    @lang('front.email') <span>info@sos.uz</span>
                   </a>
                 </p>
               </div>
@@ -185,11 +158,11 @@
                   </div>
                 </div>
                 <p>
-                  <a href="#"> «WTO» All rights reserved </a>
+                  <a href="#"> «WTO» @lang('front.all_rights_reserved') </a>
                 </p>
                 <p>
                   <a href="https://sos.uz">
-                    © Copyright 2022 - Web developed by SOS Group
+                    © Copyright {{ date("Y") }} - Web developed by SOS Group
                   </a>
                 </p>
               </div>

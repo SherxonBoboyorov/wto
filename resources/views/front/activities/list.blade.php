@@ -8,8 +8,8 @@
        <div class="back-img">
         <img src="{{ asset('front/images/./../images/back-img.jpg') }}" alt="" />
         <div class="text-content">
-          <p class="title">Activities</p>
-          <p class="text"><a href="{{ route('/') }}">Main</a> - Activities</p>
+          <p class="title">@lang('front.activities')</p>
+          <p class="text"><a href="{{ route('/') }}">@lang('front.home')</a> - @lang('front.activities')</p>
         </div>
       </div>
       <!-- Background Image end -->

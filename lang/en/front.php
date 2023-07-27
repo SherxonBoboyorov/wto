@@ -35,8 +35,28 @@ return [
      'photos'=>'Photos',
      'videos'=>'Videos',
      'this_section_is_under_development' => 'This section is under development',
-     'en' => 'EN'
+     'en' => 'EN',
 
+     'about' => 'About us',
+     'our_team' => 'Our Team',
+     'activities' => 'Activities',
+     'events' => 'Events',
+     'contacts' => 'Contacts',
+     'main' => 'Home',
+     'share' => 'Share',
+     'date' => 'Date',
+     'biography' => 'Biography',
+     'publications' => 'Publications',
+     'our_contacts' => 'Our Contacts',
+     'contact_us' => 'Contact us',
+     'send' => 'Send',
+     'map' => 'Map',
+     'phone_number' => 'Phone number',
+     'fax' => 'Fax',
+     'email' => 'Email',
+     'address' => 'Address',
+     'landmarks' => 'Landmarks',
+     'all_rights_reserved' => 'All rights reserved'
 ]
 
 

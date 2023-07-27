@@ -8,8 +8,8 @@
       <div class="back-img">
         <img src="{{ asset('front/images./../images/back-img.jpg') }}" alt="" />
         <div class="text-content">
-          <p class="title">Events</p>
-          <p class="text"><a href="{{ route('/') }}">Main</a> - events</p>
+          <p class="title">@lang('front.events')</p>
+          <p class="text"><a href="{{ route('/') }}">@lang('front.main')</a> - @lang('front.events')</p>
         </div>
       </div>
       <!-- Background Image end -->
@@ -34,7 +34,6 @@
           </div>
         </div>
       </div>
-
 
     {{ $events->links("vendor.pagination.pagination")}}
 

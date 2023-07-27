@@ -9,7 +9,7 @@
         <img src="{{ asset('front/images/./../images/back-img.jpg') }}" alt="" />
         <div class="text-content">
           <p class="title">{{ $article->{'title_' . app()->getLocale()} }}</p>
-          <p class="text"><a href="{{ route('articles') }}">News</a> - {{ $article->{'title_' . app()->getLocale()} }}</p>
+          <p class="text"><a href="{{ route('articles') }}">@lang('front.news')</a> - {{ $article->{'title_' . app()->getLocale()} }}</p>
         </div>
       </div>
       <!-- Background Image end -->
@@ -36,23 +36,23 @@
 
           <div class="head-section">
             <div class="text-content">
-              <p>Research</p>
+              <p>@lang('front.date')</p>
               <p>{{ $article->date_mask->format('F d,Y') }}</p>
             </div>
             <hr />
             <div class="link-logos">
-              <div class="share">Share</div>
-              <div class="sm-logos">
+              <div class="share">@lang('front.share')</div>
+                <a href="https://www.instagram.com/sharer/sharer.php?u={!! request()->url() !!}" class="sm-logos">
                 <div class="sm-logo">
                   <i class="fa-brands fa-instagram"></i>
                 </div>
-                <div class="sm-logo">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={!! request()->url() !!}"  class="sm-logo">
                   <i class="fa-brands fa-facebook-f"></i>
-                </div>
-                <div class="sm-logo">
+                </a>
+                <a href="#1" class="sm-logo">
                   <i class="fa-brands fa-youtube"></i>
-                </div>
-              </div>
+                </a>
+              </a>
             </div>
           </div>
         </div>

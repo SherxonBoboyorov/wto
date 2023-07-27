@@ -35,7 +35,29 @@ return [
     'photos'=>'Rasmlar',
     'videos'=>'Videolar',
     'this_section_is_under_development' => 'Ushbu bo\'lim hozirda ishlab chiqish jarayonida',
-    'en' => 'UZ'
+    'en' => 'UZ',
+
+
+    'about' => 'Biz haqimizda',
+    'our_team' => 'Bizning Jamoamiz',
+    'activities' => 'Faoliyatlar',
+    'events' => 'Tadbirlar',
+    'contacts' => 'Kontaktlar',
+    'main' => 'Bosh sahifa',
+    'share' => 'Ulashish',
+    'date' => 'Sana',
+    'biography' => 'Tarjimai hol',
+    'publications' => 'Nashrlar',
+    'our_contacts' => 'Bizning kontaktlarimiz',
+    'contact_us' => 'Biz bilan bog\'laning',
+    'send' => 'Yuborish',
+    'map' => 'Xarita',
+    'phone_number' => 'Telefon raqami',
+    'fax' => 'Faks',
+    'email' => 'Elektron pochta',
+    'address' => 'Manzil',
+    'landmarks' => 'Belgilar',
+    'all_rights_reserved' => 'Barcha huquqlar himoyalangan'
 ]
 
 

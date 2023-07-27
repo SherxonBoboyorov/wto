@@ -9,7 +9,7 @@
         <img src="{{ asset('front/images/./../images/back-img.jpg') }}" alt="" />
         <div class="text-content">
           <p class="title">{{ $team->{'title_' . app()->getLocale()} }}</p>
-          <p class="text"><a href="{{ route('our-teams') }}">Our team</a> - {{ $team->{'title_' . app()->getLocale()} }}</p>
+          <p class="text"><a href="{{ route('our-teams') }}">@lang('front.our_team')</a> - {{ $team->{'title_' . app()->getLocale()} }}</p>
         </div>
       </div>
       <!-- Background Image end -->
@@ -30,12 +30,12 @@
           </div>
 
           <div class="row line">
-            <p class="title">Biography</p>
+            <p class="title">@lang('front.biography')</p>
             <p class="text">
               {!! $team->{'biography_' . app()->getLocale()} !!}
             </p>
             <hr />
-            <p class="title">Publications</p>
+            <p class="title">@lang('front.publications')</p>
             <p class="text">
               {!! $team->{'publication_' . app()->getLocale()} !!}
             </p>

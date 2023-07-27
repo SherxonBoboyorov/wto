@@ -45,7 +45,7 @@
               
               <div class="btn">
                 <a href="{{ route('about') }}" style="width: 100%; height: 100%">
-                  <button>More</button>
+                  <button>@lang('front.more')</button>
                 </a>
               </div>
             </div>
@@ -62,7 +62,7 @@
       <div class="our-team">
         <div class="our-team-block">
           <div class="title-block">
-            <p class="title">Our Team</p>
+            <p class="title">@lang('front.our_team')</p>
             <hr />
           </div>
           <div class="row">
@@ -90,7 +90,7 @@
       <div class="container">
         <div class="activities">
           <div class="title-block">
-            <p class="title">Activities</p>
+            <p class="title">@lang('front.activities')</p>
             <hr />
           </div>
 
@@ -128,7 +128,7 @@
       <div class="container">
         <div class="news">
           <div class="title-block">
-            <p class="title">News</p>
+            <p class="title">@lang('front.news')</p>
             <hr />
           </div>
 
@@ -161,7 +161,7 @@
       <div class="container">
         <div class="events">
           <div class="title-block">
-            <p class="title">Events</p>
+            <p class="title">@lang('front.events')</p>
             <hr />
           </div>
 

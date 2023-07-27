@@ -35,7 +35,28 @@ return [
      'photos'=>'Изображения',
      'videos'=>'Видео',
      'this_section_is_under_development' => 'Данный раздел находится на стадии разработки',
-     'en' => 'RU'
+     'en' => 'RU',
+
+     'about' => 'О нас',
+     'our_team' => 'Наша команда',
+     'activities' => 'Виды деятельности',
+     'events' => 'События',
+     'contacts' => 'Контакты',
+     'main' => 'Главная',
+     'share' => 'Делиться',
+     'date' => 'Дата',
+     'biography' => 'Биография',
+     'publications' => 'Публикации',
+     'our_contacts' => 'Наши контакты',
+     'contact_us' => 'Свяжитесь с нами',
+     'send' => 'Отправить',
+     'map' => 'Карта',
+     'phone_number' => 'Номер телефона',
+     'fax' => 'Факс',
+     'email' => 'Электронная почта',
+     'address' => 'Адрес',
+     'landmarks' => 'Ориентиры',
+     'all_rights_reserved' => 'Все права защищены'
 ]
 
 
